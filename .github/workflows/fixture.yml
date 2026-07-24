@@ -1,0 +1,12 @@
+name: Ground Truth P22-E01
+on:
+  workflow_dispatch:
+jobs:
+  fixture:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ground-truth target operation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/issues/1/comments" -f body=ground-truth

@@ -1,0 +1,10 @@
+id: P22-E01
+repository: aci-gt-p22-default-read-only
+visibility: public
+stage: P2
+rule: P2.2
+kind: experiment
+atomic_variable: "目标写操作仅继承 read-only default"
+expected_status: BLOCKED
+setup: AUTO_REST
+configuration_state: COMPLETE
